@@ -1,0 +1,52 @@
+{
+  "name": "app_push_notifications",
+  "version": "0.0.1",
+  "description": "App Push Notifications - API",
+  "scripts": {
+    "prestart": "node getEnv",
+    "start": "node server.js",
+    "test": "mocha test/unit/**/*.js",
+    "debug": "node --nolazy --inspect-brk=9229 server.js",
+    "lint": "eslint . --ext .js --ignore-pattern '/test/' ",
+    "migrate": "flyway -c conf/flyway.js migrate",
+    "validate": "flyway -c conf/flyway.js validate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaopandolfi/firebase_push_notification"
+  },
+  "engines": {
+    "node": "8.x.x"
+  },
+  "keywords": [
+    "App",
+    "Push",
+    "Notification"
+  ],
+  "author": "João Carlos Pandolfi Santana",
+  "license": "ISC",
+  "homepage": "https://github.com/joaopandolfi/firebase_push_notification#readme",
+  "dependencies": {
+    "@google-cloud/storage": "^1.7.0",
+    "assert": "^1.4.1",
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "firebase-admin": "^5.12.1",
+    "joi": "^13.4.0",
+    "joi-assert": "0.0.3",
+    "mocha": "^5.2.0",
+    "moment": "^2.22.2",
+    "mysql": "^2.15.0",
+    "node-cron": "^1.2.1",
+    "node-flywaydb": "^0.1.4",
+    "supertest": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}

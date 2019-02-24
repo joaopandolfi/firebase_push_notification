@@ -1,0 +1,12 @@
+runtime: nodejs
+env: flex
+service: push-notification
+
+manual_scaling:
+  instances: 1
+
+env_variables:
+  MODE: dev
+
+beta_settings:
+  cloud_sql_instances: server-dev:us-central1:sqltdev
